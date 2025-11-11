@@ -48,7 +48,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
-import Services from '../Components/services';
+import Services from '../Components/Services';
 import About from '../Components/About';
 
 const phrases = [
