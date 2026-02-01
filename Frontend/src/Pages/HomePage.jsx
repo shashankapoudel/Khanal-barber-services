@@ -1,6 +1,8 @@
 
 // import { motion, AnimatePresence } from 'framer-motion';
 // import React, { useEffect, useState } from 'react';
+// import Services from '../Components/Services';
+// import About from '../Components/About';
 
 // const phrases = [
 //     'Classic Cuts, Modern Style',
@@ -19,32 +21,60 @@
 //     }, []);
 
 //     return (
+
 //         <div>
 
 //             <div
 //                 className="h-screen bg-cover bg-center flex flex-col items-center justify-center text-white"
 //                 style={{ backgroundImage: "url('/Images/barber.jpg')" }}
 //             >
-//                 <h1 className="text-5xl font-semibold font-rajdhani mb-4">Welcome to Khanal Barber Services</h1>
+                // <motion.div
+                //     initial={{ y: "100vh", opacity: 0 }}
+                //     animate={{ y: 0, opacity: 1 }}
+                //     transition={{ duration: 1, ease: "easeOut" }}
+                //     className="flex flex-col items-center"
+                // >
+                //     <h1 className="text-5xl font-semibold font-rajdhani mb-4">
+                //         Welcome to Khanal Barber Services
+                //     </h1>
 
-//                 <AnimatePresence mode="wait">
-//                     <motion.p
-//                         key={phrases[index]}
-//                         initial={{ opacity: 0, y: 20 }}
-//                         animate={{ opacity: 1, y: 0 }}
-//                         exit={{ opacity: 0, y: -20 }}
-//                         transition={{ duration: 0.5 }}
-//                         className="text-2xl font-orbitron text-gray-200 font-medium"
-//                     >
-//                         {phrases[index]}
-//                     </motion.p>
-//                 </AnimatePresence>
+//                     <AnimatePresence mode="wait">
+//                         <motion.p
+//                             key={phrases[index]}
+//                             initial={{ opacity: 0, y: 20 }}
+//                             animate={{ opacity: 1, y: 0 }}
+//                             exit={{ opacity: 0, y: -20 }}
+//                             transition={{ duration: 0.5 }}
+//                             className="text-2xl font-orbitron text-gray-200 font-medium"
+//                         >
+//                             {phrases[index]}
+//                         </motion.p>
+//                     </AnimatePresence>
+
+//                 </motion.div>
 //             </div>
+
+
+            // <div>
+            //     <About />
+            // </div>
+
+            // <div>
+            //     <Services />
+            // </div>
+
 
 //         </div>
 //     );
 // };
+
 // export default HomePage;
+
+
+
+
+
+
 
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
@@ -71,21 +101,34 @@ const HomePage = () => {
 
         <div>
 
-            <div
-                className="h-screen bg-cover bg-center flex flex-col items-center justify-center text-white"
-                style={{ backgroundImage: "url('/Images/barber.jpg')" }}
-            >
-                <motion.div
+           <div className="relative h-screen overflow-hidden">
+
+    {/* Background Video */}
+    <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/Images/prashanna2.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+    />
+
+    <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div> 
+
+
+    <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
+
+                      <motion.div
                     initial={{ y: "100vh", opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="flex flex-col items-center"
                 >
                     <h1 className="text-5xl font-semibold font-rajdhani mb-4">
-                        Welcome to Khanal Barber Services
+                        Welcome to Sharp & Mobile
                     </h1>
 
-                    <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait">
                         <motion.p
                             key={phrases[index]}
                             initial={{ opacity: 0, y: 20 }}
@@ -97,9 +140,10 @@ const HomePage = () => {
                             {phrases[index]}
                         </motion.p>
                     </AnimatePresence>
+        </motion.div>
 
-                </motion.div>
-            </div>
+    </div>
+</div>
 
 
             <div>
@@ -109,7 +153,6 @@ const HomePage = () => {
             <div>
                 <Services />
             </div>
-
 
         </div>
     );

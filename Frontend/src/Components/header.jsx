@@ -53,7 +53,7 @@ const Header = () => {
     const isHome = location.pathname === '/'; // Detect homepage
 
     const navItems = [
-        { name: "Home", path: '/' },
+        { name: "Home", path: '/' }, 
         { name: "About Us", path: '/about' },
         { name: "Services & Pricing", path: '/service-and-pricing' },
         { name: "Contact Us", path: '/contact' },
@@ -64,7 +64,7 @@ const Header = () => {
             className={`${isHome
                 ? 'absolute top-0 left-0 bg-black/30 backdrop-blur-sm'
                 : 'relative bg-[#111111]'
-                } w-full z-10 p-6 flex items-center justify-around border-b border-gray-600`}
+                } w-full z-10 p-6 flex items-center justify-around`}
         >
 
             <ul className="flex gap-8 text-white font-semibold text-lg font-rajdhani">

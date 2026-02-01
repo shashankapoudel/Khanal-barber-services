@@ -4,7 +4,7 @@ const Services = () => {
 
     const services = [
         {
-            image: "/Images/barber.jpg",
+            image: "/Images/prasanna1.jpeg",
             name: "Haircut and Beard",
             price: 45
         },
