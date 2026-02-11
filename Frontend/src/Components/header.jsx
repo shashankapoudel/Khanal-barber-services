@@ -16,7 +16,7 @@ const Header = () => {
     ];
 
     return (
-<header className="w-full bg-black/50 fixed top-0 left-0 z-50 p-3">
+<header className="w-full fixed top-0 left-0 z-50 p-1">
 
   <div
     className="w-2/3 mx-auto bg-[#121212] backdrop-blur-sm p-3 flex items-center justify-around rounded-full"
