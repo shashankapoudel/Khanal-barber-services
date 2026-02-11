@@ -5,17 +5,24 @@ const Services = () => {
     const services = [
         {
             image: "/Images/prasanna1.jpeg",
+            name: "Mens Haircut",
+            price: 50,
+            description:"Includes skin ,taper , burst"
+        },
+        {
+            image: "/Images/barber.jpg",
+            name: "Grooming",
+            price: 45,
+             description:"Lineup and Beards"
+        },
+        {
+            image: "/Images/barber.jpg",
             name: "Haircut and Beard",
             price: 45
         },
         {
             image: "/Images/barber.jpg",
-            name: "Beard and Moustache",
-            price: 45
-        },
-        {
-            image: "/Images/barber.jpg",
-            name: "Men's Haircut",
+            name: "Kid's Haircut",
             price: 45
         },
     ]
@@ -33,7 +40,7 @@ const Services = () => {
                 </div>
 
 
-                <div className='flex flex-col lg:flex-row gap-8 p-8'>
+                <div className='grid grid-cols-2 gap-8 p-8'>
                     {
                         services.map((service, index) => (
                             <div
@@ -46,6 +53,10 @@ const Services = () => {
                                 <div className='flex w-full justify-between'>
                                     <h1 className='text-[#FFFFFF] font-orbitron font-bold text-xl'>{service.name}</h1>
                                     <h1 className='text-[#FFFFFF] font-orbitron font-bold text-xl'>${service.price}</h1>
+                                </div>
+                                <div className='flex w-full justify-between'>
+                                    <h1 className='text-[#FFFFFF] font-orbitron font-medium text-lg'>{service.description}</h1>
+                               
                                 </div>
                             </div>
                         ))

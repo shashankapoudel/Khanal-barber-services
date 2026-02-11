@@ -13,22 +13,22 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-[#111111] text-white py-10 px-6">
+        <footer className="bg-[#121212] text-[#F5F5F5] py-10 px-6">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start justify-between gap-8 font-rajdhani text-lg">
 
                 {/* Contact Section */}
                 <div>
-                    <h2 className="text-xl font-semibold mb-3 text-[#AE7E50]">Contact Us</h2>
-                    <p>101 Street Murray, Melbourne</p>
-                    <p>Phone: 6547789</p>
-                    <p>Email: khanal@gmail.com</p>
-                    <p>Mon - Sat: 9am - 4pm</p>
-                    <p>Sunday: 9am - 2pm</p>
+                    <h2 className="text-xl font-semibold mb-3 text-[#C6A75E]">Contact Us</h2>
+                    <p>Hobart, Tasmania</p>
+                    <p>Phone: 0400811122</p>
+                    <p>Email: sharpandmobile@gmail.com</p>
+                    <p>Bookings Available</p>
+                  
                 </div>
 
                 {/* Social Links */}
                 <div>
-                    <h2 className="text-xl font-semibold mb-3 text-[#AE7E50]">Follow Us</h2>
+                    <h2 className="text-xl font-semibold mb-3 text-[#C6A75E]">Follow Us</h2>
                     <div className="flex gap-4 text-2xl">
                         <a
                             href="https://www.facebook.com/himalayascraftnepal/"
@@ -58,8 +58,8 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h1 className="text-xl font-semibold mb-3 text-[#AE7E50]">Other Links</h1>
-                    <ul className="flex flex-col text-white  text-lg font-rajdhani">
+                    <h1 className="text-xl font-semibold mb-3 text-[#C6A75E]">Other Links</h1>
+                    <ul className="flex flex-col text-[#F5F5F5]  text-lg font-rajdhani">
                         {navItems.map((item) => (
                             <li key={item.name}>
                                 <Link to={item.path}>{item.name}</Link>
@@ -70,7 +70,7 @@ const Footer = () => {
 
             </div>
 
-            <div className="text-center text-sm text-gray-400 mt-8">
+            <div className="text-center text-sm text-[#F5F5F5] mt-8">
                 © {new Date().getFullYear()} Khanal Barber Services. All rights reserved.
             </div>
         </footer>

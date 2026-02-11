@@ -125,7 +125,7 @@ const HomePage = () => {
                     className="flex flex-col items-center"
                 >
                     <h1 className="text-5xl font-semibold font-rajdhani mb-4">
-                        Welcome to Sharp & Mobile
+                        Welcome to SHARP AND MOBILE
                     </h1>
 
           <AnimatePresence mode="wait">
