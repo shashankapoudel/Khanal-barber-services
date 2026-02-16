@@ -124,7 +124,7 @@ const HomePage = () => {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="flex flex-col items-center"
                 >
-                    <h1 className="text-5xl font-semibold font-rajdhani mb-4">
+                    <h1 className="text-5xl font-semibold font-orbitron mb-4">
                         Welcome to SHARP AND MOBILE
                     </h1>
 
@@ -135,7 +135,7 @@ const HomePage = () => {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.5 }}
-                            className="text-2xl font-orbitron text-gray-200 font-medium"
+                            className="text-2xl font-rajdhani text-[#C6A45C] font-medium"
                         >
                             {phrases[index]}
                         </motion.p>

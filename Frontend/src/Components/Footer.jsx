@@ -70,7 +70,7 @@ const Footer = () => {
 
             </div>
 
-            <div className="text-center text-sm text-[#F5F5F5] mt-8">
+            <div className="text-center text-sm text-[#C6A45C] mt-8">
                 © {new Date().getFullYear()} Khanal Barber Services. All rights reserved.
             </div>
         </footer>

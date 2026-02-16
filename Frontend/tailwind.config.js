@@ -11,6 +11,7 @@ export default {
         roboto: ['Roboto'],
         orbitron: ['Orbitron'],
         rajdhani: ['Rajdhani'],
+          inter: ['Inter', 'sans-serif'],
       },
     },
   },

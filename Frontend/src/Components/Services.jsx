@@ -35,7 +35,7 @@ const Services = () => {
 
 
                 <div className='flex flex-col items-center justify-center'>
-                    <h1 className='text-[#C6A45C] font-bold text-xl lg:text-2xl font-rajdhani'>-- WHAT WE DO --</h1>
+                    <h1 className='text-[#FFFFFF] font-bold text-xl lg:text-2xl font-rajdhani'>-- WHAT WE DO --</h1>
                     <h1 className='text-[#C6A45C] font-bold text-2xl lg:text-5xl leading-relaxed font-orbitron'>OUR  SERVICES</h1>
                 </div>
 
