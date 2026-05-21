@@ -13,7 +13,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-[#121212] text-[#F5F5F5] py-10 px-6">
+        <footer className="bg-[#121212] text-[#F5F5F5] py-10 px-6 ">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start justify-between gap-8 font-rajdhani text-lg">
 
                 {/* Contact Section */}
@@ -70,7 +70,7 @@ const Footer = () => {
 
             </div>
 
-            <div className="text-center text-sm text-[#C6A45C] mt-8">
+            <div className="text-center text-sm text-[#F5F5F5] mt-8">
                 © {new Date().getFullYear()} Khanal Barber Services. All rights reserved.
             </div>
         </footer>
