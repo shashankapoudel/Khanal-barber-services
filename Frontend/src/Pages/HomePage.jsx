@@ -1,4 +1,3 @@
-
 // import { motion, AnimatePresence } from 'framer-motion';
 // import React, { useEffect, useState } from 'react';
 // import Services from '../Components/Services';
@@ -28,15 +27,15 @@
 //                 className="h-screen bg-cover bg-center flex flex-col items-center justify-center text-white"
 //                 style={{ backgroundImage: "url('/Images/barber.jpg')" }}
 //             >
-                // <motion.div
-                //     initial={{ y: "100vh", opacity: 0 }}
-                //     animate={{ y: 0, opacity: 1 }}
-                //     transition={{ duration: 1, ease: "easeOut" }}
-                //     className="flex flex-col items-center"
-                // >
-                //     <h1 className="text-5xl font-semibold font-rajdhani mb-4">
-                //         Welcome to Khanal Barber Services
-                //     </h1>
+// <motion.div
+//     initial={{ y: "100vh", opacity: 0 }}
+//     animate={{ y: 0, opacity: 1 }}
+//     transition={{ duration: 1, ease: "easeOut" }}
+//     className="flex flex-col items-center"
+// >
+//     <h1 className="text-5xl font-semibold font-rajdhani mb-4">
+//         Welcome to Khanal Barber Services
+//     </h1>
 
 //                     <AnimatePresence mode="wait">
 //                         <motion.p
@@ -54,15 +53,13 @@
 //                 </motion.div>
 //             </div>
 
+// <div>
+//     <About />
+// </div>
 
-            // <div>
-            //     <About />
-            // </div>
-
-            // <div>
-            //     <Services />
-            // </div>
-
+// <div>
+//     <Services />
+// </div>
 
 //         </div>
 //     );
@@ -70,92 +67,77 @@
 
 // export default HomePage;
 
-
-
-
-
-
-
-import { motion, AnimatePresence } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
-import Services from '../Components/Services';
-import About from '../Components/About';
+import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import Services from "../Components/Services";
+import About from "../Components/About";
 
 const phrases = [
-    'Classic Cuts, Modern Style',
-    'Precision. Passion. Perfection.',
-    'Look Sharp. Feel Sharp.',
+  "Classic Cuts, Modern Style",
+  "Precision. Passion. Perfection.",
+  "Look Sharp. Feel Sharp.",
 ];
 
 const HomePage = () => {
-    const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setIndex((prev) => (prev + 1) % phrases.length);
-        }, 2500);
-        return () => clearInterval(timer);
-    }, []);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % phrases.length);
+    }, 2500);
+    return () => clearInterval(timer);
+  }, []);
 
-    return (
+  return (
+    <div>
+      <div className="relative h-screen overflow-hidden">
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          src="/Images/prashanna2.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
 
-        <div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
 
-           <div className="relative h-screen overflow-hidden">
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
+          <motion.div
+            initial={{ y: "100vh", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="flex flex-col items-center"
+          >
+            <h1 className="text-5xl font-semibold font-orbitron mb-4">
+              Welcome to SHARP AND MOBILE
+            </h1>
 
-    {/* Background Video */}
-    <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/Images/prashanna2.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-    />
-
-    <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div> 
-
-
-    <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
-
-                      <motion.div
-                    initial={{ y: "100vh", opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    className="flex flex-col items-center"
-                >
-                    <h1 className="text-5xl font-semibold font-orbitron mb-4">
-                        Welcome to SHARP AND MOBILE
-                    </h1>
-
-          <AnimatePresence mode="wait">
-                        <motion.p
-                            key={phrases[index]}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.5 }}
-                            className="text-2xl font-rajdhani text-[#C6A45C] font-medium"
-                        >
-                            {phrases[index]}
-                        </motion.p>
-                    </AnimatePresence>
-        </motion.div>
-
-    </div>
-</div>
-
-
-            <div>
-                <About />
-            </div>
-
-            <div>
-                <Services />
-            </div>
-
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={phrases[index]}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className="text-2xl font-rajdhani text-[#C6A45C] font-medium"
+              >
+                {phrases[index]}
+              </motion.p>
+            </AnimatePresence>
+          </motion.div>
         </div>
-    );
+      </div>
+
+      <div>
+        <About />
+      </div>
+
+      <div>
+        <Services />
+      </div>
+    </div>
+  );
 };
 
 export default HomePage;
