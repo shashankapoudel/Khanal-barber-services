@@ -132,7 +132,7 @@ Time: ${time}
             </button>
 
             <button
-              onClick={handleWhatsAppBooking}
+              onClick={handleBooking}
               disabled={!name || !time}
               className="w-full bg-[#C6A45C] text-black font-bold py-3 rounded-xl disabled:opacity-50"
             >
