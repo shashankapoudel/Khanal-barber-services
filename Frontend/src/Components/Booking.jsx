@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import { createPortal } from "react-dom";
 import "react-datepicker/dist/react-datepicker.css";
+import BASE_URL from "../Config/api";
 
 const Booking = ({ serviceName }) => {
   const [showModal, setShowModal] = useState(false);
@@ -9,6 +10,8 @@ const Booking = ({ serviceName }) => {
   const [name, setName] = useState("");
   const [date, setDate] = useState(new Date());
   const [time, setTime] = useState("");
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const slots = [
     "10:00 AM",
@@ -19,8 +22,23 @@ const Booking = ({ serviceName }) => {
     "3:00 PM",
   ];
 
-  const handleWhatsAppBooking = () => {
-    const message = `
+  const handleBooking = async () => {
+    try {
+      setLoading(true);
+
+      const res = await fetch(`${BASE_URL}/booking/create`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, serviceName, date, time }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.message || "Booking failed");
+      }
+      alert("Booking created successfully");
+      const message = `
 Hello, I would like to book an appointment.
 
 Service: ${serviceName}
@@ -28,17 +46,21 @@ Name: ${name}
 Date: ${date.toDateString()}
 Time: ${time}
     `;
+      const whatsappNumber = "9779812345678";
 
-    const whatsappNumber = "9779812345678";
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-    window.open(url, "_blank");
-
-    setShowModal(false);
-    setName("");
-    setDate(new Date());
-    setTime("");
+      window.open(url, "_blank");
+      setShowModal(false);
+      setName("");
+      setEmail("");
+      setTime("");
+      setDate(new Date());
+    } catch (error) {
+      alert(error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const modal = (
@@ -63,6 +85,14 @@ Time: ${time}
             placeholder="Your Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            className="w-full bg-[#1B1F21] text-white p-4 rounded-xl outline-none border border-transparent focus:border-[#C6A45C]"
+          />
+
+          <input
+            type="email"
+            placeholder="Your Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="w-full bg-[#1B1F21] text-white p-4 rounded-xl outline-none border border-transparent focus:border-[#C6A45C]"
           />
 

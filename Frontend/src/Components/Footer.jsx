@@ -8,7 +8,7 @@ const Footer = () => {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Services & Pricing", path: "/service-and-pricing" },
-    { name: "Contact Us", path: "" },
+    { name: "Contact Us", path: "/" },
   ];
   const navigate = useNavigate();
   return (
