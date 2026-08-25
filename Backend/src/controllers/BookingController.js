@@ -34,7 +34,7 @@ const createBooking = asyncHandler(async (req, res) => {
 
   res
     .status(201)
-    .json(new ApiResponse(201, booking, "Booking Created Successfully"));
+    .json(new ApiResponse(201, booking, "Booking created succesfully"));
 });
 
 const claimReward = asyncHandler(async (req, res) => {
@@ -55,7 +55,7 @@ const claimReward = asyncHandler(async (req, res) => {
 
   await customer.save();
 
-  res.status(201).json(new ApiResponse(201, "Reward Claimed"));
+  res.status(201).json(new ApiResponse(201, "Reward claimed"));
 });
 
 module.exports = { createBooking, claimReward };

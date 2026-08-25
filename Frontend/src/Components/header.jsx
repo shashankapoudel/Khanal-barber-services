@@ -21,7 +21,9 @@ const Header = () => {
         <ul className="flex gap-8 text-[#F5F5F5] font-medium text-lg font-rajdhani">
           {navItems.map((item) => (
             <li key={item.name}>
-              <Link to={item.path}>{item.name}</Link>
+              <Link className="hover:text-[#C6A45C]" to={item.path}>
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>

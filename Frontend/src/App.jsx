@@ -5,7 +5,7 @@ import HomePage from "./Pages/HomePage";
 import Footer from "./Components/Footer";
 import AboutPage from "./Components/About";
 import Services from "./Components/Services";
-// import ContactPage from './Pages/ContactPage'
+import ContactPage from "./Pages/ContactPage";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/service-and-pricing" element={<Services />} />
-          {/* <Route path='/contact' element={<ContactPage />} /> */}
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
