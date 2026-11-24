@@ -69,7 +69,7 @@ const PHONE_LINK = "0400811122";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
-  { name: "Services & Pricing", path: "/service-and-pricing" },
+  { name: "Services & Pricing", path: "/services" },
   { name: "Contact Us", path: "/contact" },
 ];
 
@@ -127,14 +127,14 @@ const Header = () => {
               BARBER SHOP
             </span>
             {/* Barber-pole stripe accent */}
-            <span className="mt-1.5 flex h-[2px] w-full overflow-hidden rounded-full">
+            {/* <span className="mt-1.5 flex h-[2px] w-full overflow-hidden rounded-full">
               <span className="flex-1 bg-[#B3202E]" />
               <span className="flex-1 bg-[#F5F0E6]" />
               <span className="flex-1 bg-[#1F4E9C]" />
               <span className="flex-1 bg-[#B3202E]" />
               <span className="flex-1 bg-[#F5F0E6]" />
               <span className="flex-1 bg-[#1F4E9C]" />
-            </span>
+            </span> */}
           </span>
         </Link>
 

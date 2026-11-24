@@ -350,14 +350,14 @@ const HomePage = () => {
             className="mt-10 flex flex-col items-center gap-4 sm:flex-row"
           >
             <a
-              href="#services"
+              href="/services"
               className="group relative overflow-hidden border border-[#C6A45C] bg-gradient-to-r from-[#8A6D2F] via-[#C6A45C] to-[#8A6D2F] px-10 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#0A0A0B] transition-all duration-500 hover:shadow-[0_0_40px_rgba(198,164,92,0.45)]"
             >
               <span className="relative z-10">Our Services</span>
               <span className="absolute inset-0 -translate-x-full bg-[#F3E3B5] transition-transform duration-500 group-hover:translate-x-0" />
             </a>
             <a
-              href="#about"
+              href="/about"
               className="border border-[#C6A45C]/50 px-10 py-4 text-xs font-medium uppercase tracking-[0.3em] text-[#F5F0E6] transition-all duration-500 hover:border-[#C6A45C] hover:bg-[#C6A45C]/10 hover:text-[#E8D5A3]"
             >
               Our Story
